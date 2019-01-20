@@ -32,4 +32,20 @@ public interface ApiInterface {
     @GET("civil_book_list.php")
     Call<List<CseBookList>> civilbooklist();
 
+    @GET("addcsebook.php")
+    Call<CseBookList> addcsebook(@Query("bookname") String bookname,
+                                 @Query("writername") String writername,
+                                 @Query("edition") String edition,
+                                 @Query("amount") String amount);
+    @GET("addeeebook.php")
+    Call<CseBookList> addeeebook(@Query("bookname") String bookname,
+                                 @Query("writername") String writername,
+                                 @Query("edition") String edition,
+                                 @Query("amount") String amount);
+    @GET("addcivilbook.php")
+    Call<CseBookList> addcivilbook(@Query("bookname") String bookname,
+                                 @Query("writername") String writername,
+                                 @Query("edition") String edition,
+                                 @Query("amount") String amount);
+
 }

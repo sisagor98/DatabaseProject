@@ -67,6 +67,7 @@ public class registerFragment extends android.support.v4.app.Fragment {
         final String session = editTextSession.getText().toString().trim();
         final String phone = editTextPhone.getText().toString().trim();
 
+
         progressDialog.setMessage("Registering user...");
         progressDialog.show();
 

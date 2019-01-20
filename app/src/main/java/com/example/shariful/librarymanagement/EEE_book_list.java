@@ -1,9 +1,12 @@
 package com.example.shariful.librarymanagement;
 
+import android.content.Intent;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
 import android.widget.Toast;
 
 import com.example.shariful.librarymanagement.Adapters.CSbooklistAdapter;
@@ -17,6 +20,8 @@ import retrofit2.Response;
 
 public class EEE_book_list extends AppCompatActivity {
 
+    private FloatingActionButton addeeebookbutton;
+
     List<CseBookList> mcse;
     CseBookList mcsee;
 
@@ -24,10 +29,19 @@ public class EEE_book_list extends AppCompatActivity {
     private RecyclerView recyclerView;
     private CSbooklistAdapter adapter;
     @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_cse__book__list);
+        setContentView(R.layout.activity_eee_book_list);
+
+        addeeebookbutton= findViewById(R.id.eeebookinsertbutton);
+
+        addeeebookbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(EEE_book_list.this,AddEeeBook.class));
+                //Toast.makeText(EEE_book_list.this,"Working",Toast.LENGTH_LONG).show();
+            }
+        });
 
         recyclerView = findViewById(R.id.recycleview_cse);
         recyclerView.setHasFixedSize(true);

@@ -21,7 +21,10 @@
         <activity android:name=".BookCategory" />
         <activity android:name=".CSE_Book_List" />
         <activity android:name=".CIVIL_book_list" />
-        <activity android:name=".EEE_book_list"></activity>
+        <activity android:name=".EEE_book_list" />
+        <activity android:name=".AddCseBook" />
+        <activity android:name=".AddEeeBook" />
+        <activity android:name=".AddCivilBook"></activity>
     </application>
 
 </manifest>

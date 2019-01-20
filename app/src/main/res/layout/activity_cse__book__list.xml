@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -44,33 +44,36 @@
                 android:layout_height="match_parent"
                 android:gravity="center"
                 android:text="Amount" />
-        </LinearLayout>
 
+        </LinearLayout>
 
     </android.support.v7.widget.CardView>
 
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/csebookinsertbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|bottom"
+            android:layout_margin="16dp"
+            android:padding="16dp"
+            android:src="@android:drawable/ic_input_add"
+            app:backgroundTint="@android:color/holo_blue_dark"
+            app:fabSize="mini" />
+
+
     <android.support.v7.widget.RecyclerView
+
         android:id="@+id/recycleview_cse"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
+        android:layout_height="match_parent"
+        android:layout_marginTop="60dp"
+        android:orientation="vertical">
 
-    <!--<TextView-->
-        <!--android:id="@+id/b"-->
-        <!--android:text="sfjshkfskfjsjf"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="20dp"/>-->
-    <!--<TextView-->
+    </android.support.v7.widget.RecyclerView>
 
-        <!--android:id="@+id/w"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="20dp" />-->
-    <!--<TextView-->
-        <!--android:id="@+id/e"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="20dp" />-->
-    <!--<TextView-->
-        <!--android:id="@+id/a"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="20dp" />-->
 
-</LinearLayout>
+
+
+
+</FrameLayout>

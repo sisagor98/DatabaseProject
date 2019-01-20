@@ -106,12 +106,15 @@ public class LoginFragment extends android.support.v4.app.Fragment {
             public void onResponse(retrofit2.Call<Login_stu> call, Response<Login_stu> response) {
                 if(response.isSuccessful()){
                     loginProgessDialog.dismiss();
-                    if (response.body().getResponse().equals("ok")) {
+                    if(username.equals("admin") && password.equals("admin")){
+                        Toast.makeText(getActivity(),"Admin logging Sucessful",Toast.LENGTH_LONG).show();
+                    }
+                    else if (response.body().getResponse().equals("ok")) {
                         LoginFragment.prefConfig.writeLoginStatus(true);
                         Toast.makeText(getActivity(), "Login Successful", Toast.LENGTH_LONG).show();
                         startActivity(new Intent(getActivity(), BookCategory.class) );
                     }
-                    if(response.body().getResponse().equals("failed")){
+                    else if(response.body().getResponse().equals("failed")){
                         Toast.makeText(getActivity(),"Login Faied,Enter correct user name and password",Toast.LENGTH_LONG).show();                    }
                 }
             }

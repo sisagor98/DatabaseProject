@@ -1,9 +1,12 @@
 package com.example.shariful.librarymanagement;
 
+import android.content.Intent;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
 import android.widget.Toast;
 
 import com.example.shariful.librarymanagement.Adapters.CSbooklistAdapter;
@@ -18,6 +21,8 @@ import retrofit2.Retrofit;
 
 public class CIVIL_book_list extends AppCompatActivity {
 
+
+    private FloatingActionButton addbookbutton;
 
     List<CseBookList> mcse;
     CseBookList mcsee;
@@ -35,6 +40,14 @@ public class CIVIL_book_list extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
 
+        addbookbutton = findViewById(R.id.civilbookinsertbutton);
+        addbookbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(CIVIL_book_list.this,AddCivilBook.class));
+                //Toast.makeText(CSE_Book_List.this,"Working",Toast.LENGTH_LONG).show();
+            }
+        });
 
 
         Call<List<CseBookList>> call=MainActivity.apiInterface.civilbooklist();
