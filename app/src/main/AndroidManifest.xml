@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.shariful.librarymanagement">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -18,6 +18,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".BookCategory" />
+        <activity android:name=".CSE_Book_List" />
+        <activity android:name=".CIVIL_book_list" />
+        <activity android:name=".EEE_book_list"></activity>
     </application>
 
 </manifest>

@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.shariful.librarymanagement.Config.PrefConfig;
 import com.example.shariful.librarymanagement.fragment.LoginFragment;
 import com.example.shariful.librarymanagement.fragment.registerFragment;
 import com.example.shariful.librarymanagement.retrofit.ApiClient;
@@ -31,7 +32,6 @@ public class MainActivity extends AppCompatActivity implements LoginFragment.Lis
         apiInterface= ApiClient.getApiClient().create(ApiInterface.class);
 
 
-
         //buttonRegister.setOnClickListener(this);
 
         LoginFragment loginFragment = new LoginFragment();
@@ -51,9 +51,4 @@ public class MainActivity extends AppCompatActivity implements LoginFragment.Lis
     }
 
 
-    /*@Override
-    public void onClick(View view) {
-        if (view == buttonRegister)
-            registerUser();
-    }*/
 }

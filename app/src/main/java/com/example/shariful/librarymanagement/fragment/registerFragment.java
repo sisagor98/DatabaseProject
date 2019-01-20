@@ -1,11 +1,7 @@
 package com.example.shariful.librarymanagement.fragment;
 
 import android.app.ProgressDialog;
-import android.content.Context;
-import android.net.Uri;
 import android.os.Bundle;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,7 +11,7 @@ import android.widget.Toast;
 
 import com.example.shariful.librarymanagement.MainActivity;
 import com.example.shariful.librarymanagement.R;
-import com.example.shariful.librarymanagement.Register_stu;
+import com.example.shariful.librarymanagement.Models.Register_stu;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -25,7 +21,6 @@ public class registerFragment extends android.support.v4.app.Fragment {
 
     private EditText editTextUsername, editTextEmail, editTextPassword;
     private EditText editTextDepartment, editTextReg, editTextSession, editTextPhone;
-    private Button buttonRegister;
     private ProgressDialog progressDialog;
 
 
@@ -49,7 +44,6 @@ public class registerFragment extends android.support.v4.app.Fragment {
         editTextReg = (EditText) view.findViewById(R.id.editTextReg);
         editTextSession = (EditText) view.findViewById(R.id.editTextSession);
         editTextPhone = (EditText) view.findViewById(R.id.editTextPhone);
-        buttonRegister = view.findViewById(R.id.submitButton);
         progressDialog = new ProgressDialog(getActivity());
 
         submit = view.findViewById(R.id.submitButton);

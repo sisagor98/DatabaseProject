@@ -5,6 +5,7 @@
     android:layout_height="match_parent"
     tools:context=".fragment.LoginFragment">
 
+
     <LinearLayout
     android:id="@+id/linearLayout"
     android:layout_width="match_parent"
@@ -19,7 +20,7 @@
         android:text="Username" />
 
     <EditText
-        android:id="@+id/editTextUsername"
+        android:id="@+id/editTextUsernameLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Enter username" />
@@ -31,7 +32,7 @@
         android:text="password" />
 
     <EditText
-        android:id="@+id/editTextPassword"
+        android:id="@+id/editTextPasswordLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Enter password"

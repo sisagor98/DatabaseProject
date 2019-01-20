@@ -1,4 +1,4 @@
-package com.example.shariful.librarymanagement;
+package com.example.shariful.librarymanagement.Models;
 
 import com.google.gson.annotations.SerializedName;
 
