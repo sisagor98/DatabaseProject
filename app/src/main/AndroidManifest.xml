@@ -14,9 +14,15 @@
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.SEARCH" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable"
+                android:value=".SearchableActivity" />
         </activity>
         <activity android:name=".BookCategory" />
         <activity android:name=".CSE_Book_List" />
@@ -24,7 +30,9 @@
         <activity android:name=".EEE_book_list" />
         <activity android:name=".AddCseBook" />
         <activity android:name=".AddEeeBook" />
-        <activity android:name=".AddCivilBook"></activity>
+        <activity android:name=".AddCivilBook" />
+        <activity android:name=".RegisterStudentList" />
+        <activity android:name=".Register_Book"></activity>
     </application>
 
 </manifest>

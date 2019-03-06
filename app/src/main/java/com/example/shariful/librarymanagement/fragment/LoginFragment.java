@@ -108,6 +108,8 @@ public class LoginFragment extends android.support.v4.app.Fragment {
                     loginProgessDialog.dismiss();
                     if(username.equals("admin") && password.equals("admin")){
                         Toast.makeText(getActivity(),"Admin logging Sucessful",Toast.LENGTH_LONG).show();
+                        startActivity(new Intent(getActivity(), BookCategory.class) );
+                        //LoginFragment.prefConfig.writeAdminLoginStatus(true);
                     }
                     else if (response.body().getResponse().equals("ok")) {
                         LoginFragment.prefConfig.writeLoginStatus(true);

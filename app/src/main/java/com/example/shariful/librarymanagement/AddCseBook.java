@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.shariful.librarymanagement.Config.PrefConfig;
 import com.example.shariful.librarymanagement.Models.CseBookList;
 
 import retrofit2.Call;
@@ -15,6 +16,8 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class AddCseBook extends AppCompatActivity {
+
+    public static PrefConfig prefConfig;
 
     private Button submit;
     private EditText editBookname;
@@ -28,6 +31,10 @@ public class AddCseBook extends AppCompatActivity {
         setContentView(R.layout.addcsebook);
 
         submit = findViewById(R.id.addbookButton);
+//        prefConfig = new PrefConfig(AddCseBook.this);
+//        if(!prefConfig.readAdminLoginStatus()){
+//            submit.setVisibility(View.INVISIBLE);
+//        }
         editBookname = findViewById(R.id.editTextBookname);
         editWritername = findViewById(R.id.editTextWritername);
         editEdition = findViewById(R.id.editTextEdition);

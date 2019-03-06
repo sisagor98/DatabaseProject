@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="50dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <android.support.v7.widget.CardView
 
@@ -24,32 +23,30 @@
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/b"
-                android:layout_width="150dp"
-                android:layout_height="match_parent"
-                android:gravity="center" />
-
-            <TextView
-                android:id="@+id/w"
+                android:id="@+id/username"
                 android:layout_width="100dp"
                 android:layout_height="match_parent"
                 android:gravity="center" />
 
             <TextView
-                android:id="@+id/e"
-                android:layout_width="70dp"
+                android:id="@+id/dept"
+                android:layout_width="50dp"
                 android:layout_height="match_parent"
                 android:gravity="center" />
 
             <TextView
-                android:id="@+id/a"
+                android:id="@+id/reg"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/phone"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center" />
         </LinearLayout>
 
     </android.support.v7.widget.CardView>
-
-
 
 </RelativeLayout>

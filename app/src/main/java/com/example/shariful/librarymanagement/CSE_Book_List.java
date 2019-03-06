@@ -1,11 +1,19 @@
 package com.example.shariful.librarymanagement;
 
+import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.Intent;
 import android.support.design.widget.FloatingActionButton;
+import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.SearchView;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
+import android.view.SearchEvent;
 import android.view.View;
 import android.widget.Toast;
 
@@ -27,8 +35,10 @@ public class CSE_Book_List extends AppCompatActivity {
     CseBookList mcsee;
 
 
+
     private RecyclerView recyclerView;
     private CSbooklistAdapter adapter;
+
 
 
     @Override
@@ -49,8 +59,12 @@ public class CSE_Book_List extends AppCompatActivity {
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
+        fetchCseBookList("");
 
 
+
+    }
+    public void fetchCseBookList(String key){
 
         Call<List<CseBookList>> call=MainActivity.apiInterface.csebooklist();
         call.enqueue(new Callback<List<CseBookList>>() {
@@ -69,8 +83,19 @@ public class CSE_Book_List extends AppCompatActivity {
                 Toast.makeText(CSE_Book_List.this,"Database Connection failed. "+ t.getMessage(),Toast.LENGTH_LONG).show();
             }
         });
-
-
     }
 
+    @SuppressLint("ServiceCast")
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu,menu);
+      //SearchManager searchManager = (SearchManager) getSystemService(Context.SEARCH_SERVICE);
+//        SearchView searchView = (SearchView) menu.findItem(R.id.search).getActionView();
+//
+//        searchView.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
+
+        return super.onCreateOptionsMenu(menu);
+    }
 }
+

@@ -3,6 +3,7 @@ package com.example.shariful.librarymanagement.retrofit;
 import com.example.shariful.librarymanagement.CSE_Book_List;
 import com.example.shariful.librarymanagement.Models.CseBookList;
 import com.example.shariful.librarymanagement.Models.Login_stu;
+import com.example.shariful.librarymanagement.Models.RegisterBook;
 import com.example.shariful.librarymanagement.Models.Register_stu;
 
 import java.util.List;
@@ -24,6 +25,19 @@ public interface ApiInterface {
                                         @Query("reg") String reg,
                                         @Query("session") String session,
                                         @Query("phone") String phone);
+    @GET("registerbook.php")
+    Call<RegisterBook> registerBook(@Query("username") String username,
+                                        @Query("reg") String reg,
+                                        @Query("bookname") String bookname,
+                                        @Query("bookid") String bookid,
+                                        @Query("date") String date);
+
+    @GET("registered_stu_list.php")
+    Call<List<Register_stu>> registeredstulist();
+
+    @GET("deletebook.php")
+    Call<CseBookList>deleteBook(@Query("bookname")String bookname);
+
 
     @GET("cse_book_list.php")
     Call<List<CseBookList>> csebooklist();

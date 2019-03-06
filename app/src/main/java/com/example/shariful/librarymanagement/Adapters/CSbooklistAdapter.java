@@ -3,15 +3,23 @@ package com.example.shariful.librarymanagement.Adapters;
 import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
+import android.telecom.Call;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.example.shariful.librarymanagement.MainActivity;
 import com.example.shariful.librarymanagement.Models.CseBookList;
 import com.example.shariful.librarymanagement.R;
 
 import java.util.List;
+
+import retrofit2.Callback;
+import retrofit2.Response;
+
+import static com.example.shariful.librarymanagement.retrofit.ApiClient.retrofit;
 
 public class CSbooklistAdapter extends RecyclerView.Adapter<CSbooklistAdapter.ViewHolder> {
     List<CseBookList> Cs;
@@ -30,13 +38,27 @@ public class CSbooklistAdapter extends RecyclerView.Adapter<CSbooklistAdapter.Vi
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder viewHolder, int i) {
+    public void onBindViewHolder(@NonNull final ViewHolder viewHolder, int i) {
 
+        final int position = i;
 
         viewHolder.b.setText(Cs.get(i).getBookname());
         viewHolder.w.setText(Cs.get(i).getWritername());
         viewHolder.e.setText(Cs.get(i).getEdition());
         viewHolder.a.setText(Cs.get(i).getAmount());
+
+
+        viewHolder.itemView.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+
+                //Toast.makeText(context,"Long clicked"+ position + viewHolder.b.getText(),Toast.LENGTH_SHORT).show();
+                deleteItem(position,viewHolder.b.getText(),viewHolder.w.getText());
+                Cs.remove(position);
+                notifyDataSetChanged();
+                return true;
+            }
+        });
     }
 
     @Override
@@ -59,4 +81,28 @@ public class CSbooklistAdapter extends RecyclerView.Adapter<CSbooklistAdapter.Vi
             a = itemView.findViewById(R.id.a);
         }
     }
+
+    public void deleteItem(int position, CharSequence b, CharSequence w){
+
+
+
+        final String bookname = b.toString().trim();
+        final String writername = w.toString().trim();
+
+        retrofit2.Call<CseBookList> call = MainActivity.apiInterface.deleteBook(bookname);
+
+        call.enqueue(new Callback<CseBookList>() {
+            @Override
+            public void onResponse(retrofit2.Call<CseBookList> call, Response<CseBookList> response) {
+                Toast.makeText(context,"delete complete",Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onFailure(retrofit2.Call<CseBookList> call, Throwable t) {
+                Toast.makeText(context,"delete complete ",Toast.LENGTH_LONG).show();
+            }
+        });
+
+    }
+
 }
