@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    >
+
+    <ScrollView
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     android:background="@drawable/bg"
+     >
+
+     <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:layout_marginTop="50dp"
+         android:layout_marginLeft="20dp"
+         android:layout_marginRight="20dp"
+         android:orientation="vertical">
+
+         <Button
+
+             android:textColor="#ffffff"
+             android:textSize="18sp"
+             android:id="@+id/cse_book_list"
+             android:background="@drawable/button1"
+             android:text="CSE Book List"
+             android:layout_margin="10dp"
+             android:shadowColor="@color/colorAccent"
+             android:textStyle="bold"
+             android:gravity="center"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent" />
+         <Button
+             android:textColor="#ffffff"
+             android:textSize="18sp"
+             android:background="@drawable/button1"
+             android:id="@+id/eee_book_list"
+             android:text="EEE Book List"
+             android:layout_margin="10dp"
+             android:shadowColor="@color/colorAccent"
+             android:textStyle="bold"
+             android:gravity="center"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent" />
+         <Button
+             android:textColor="#ffffff"
+             android:textSize="18sp"
+             android:background="@drawable/button1"
+             android:id="@+id/civil_book_list"
+             android:text="CIVIL Book List"
+             android:layout_margin="10dp"
+             android:shadowColor="@color/colorAccent"
+             android:textStyle="bold"
+             android:gravity="center"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent" />
+         <Button
+             android:textColor="#ffffff"
+             android:textSize="18sp"
+             android:background="@drawable/button1"
+             android:id="@+id/rb"
+             android:text="REGISTER BOOK"
+             android:layout_margin="10dp"
+             android:shadowColor="@color/colorAccent"
+             android:textStyle="bold"
+             android:gravity="center"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent" />
+         <Button
+             android:textColor="#ffffff"
+             android:textSize="18sp"
+             android:background="@drawable/button1"
+             android:id="@+id/urb"
+             android:text="UNREGISTER BOOK"
+             android:layout_margin="10dp"
+             android:shadowColor="@color/colorAccent"
+             android:textStyle="bold"
+             android:gravity="center"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent" />
+
+         <TextView
+             android:textColor="#000000"
+             android:id="@+id/rsl"
+             android:background="@drawable/round1"
+             android:text="Register Student List"
+             android:gravity="center"
+             android:layout_marginLeft="10dp"
+             android:layout_marginRight="10dp"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent" />
+         <TextView
+             android:textColor="#000000"
+             android:background="@drawable/round1"
+             android:id="@+id/rsbl"
+             android:text="Register Student Book List"
+             android:layout_marginRight="10dp"
+             android:layout_marginLeft="10dp"
+             android:gravity="center"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent" />
+
+     </LinearLayout>
+ </ScrollView>
+
+</RelativeLayout>
