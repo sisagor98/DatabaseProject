@@ -17,7 +17,7 @@
         android:text="User Name" />
 
     <EditText
-        android:id="@+id/editTextUsernamee"
+        android:id="@+id/uUserName"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
         android:layout_width="match_parent"
@@ -41,28 +41,11 @@
         android:layout_marginRight="15dp"
         android:paddingLeft="15dp"
         android:background="@drawable/round1"
-        android:id="@+id/editTextRegNumber"
+        android:id="@+id/uRegNumber"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:hint="Enter reg number" />
-    <TextView
-        android:paddingLeft="10dp"
-        android:layout_marginLeft="15dp"
 
-        android:textColor="#ffffff"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Book Name" />
-
-    <EditText
-        android:paddingLeft="15dp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"
-        android:background="@drawable/round1"
-        android:id="@+id/editTextBooknamee"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:hint="Enter bookname" />
     <TextView
         android:paddingLeft="10dp"
         android:layout_marginLeft="15dp"
@@ -76,31 +59,13 @@
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
         android:background="@drawable/round1"
-        android:id="@+id/editTextBookid"
+        android:id="@+id/uBookid"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:hint="Enter book id" />
-    <TextView
-        android:paddingLeft="10dp"
-        android:layout_marginLeft="15dp"
-
-        android:textColor="#ffffff"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Date" />
-
-    <EditText
-        android:paddingLeft="15dp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"
-        android:background="@drawable/round1"
-        android:id="@+id/editTextdate"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:hint="Enter date" />
 
     <Button
-        android:id="@+id/submit_register_book"
+        android:id="@+id/submit_unregister_book"
         android:layout_width="250dp"
         android:layout_height="50dp"
         android:layout_marginTop="20dp"

@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg"
     tools:context=".fragment.registerFragment">
 
     <TextView
@@ -13,84 +14,156 @@
         android:textSize="20dp"
         android:textColor="#06f512"
         android:text="Registration Form" />
-    <LinearLayout
+    <ScrollView
+        android:layout_marginTop="60dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="50dp"
-        android:layout_centerVertical="true"
-        android:orientation="vertical">
+        >
+        <LinearLayout
 
-        <TextView
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="User Name"/>
-        <EditText
-            android:id="@+id/editTextUsername"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Enter username" />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Email"/>
-        <EditText
-            android:id="@+id/editTextEmail"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Enter email" />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Password"/>
-        <EditText
-            android:id="@+id/editTextPassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Enter password" />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Department"/>
-        <EditText
-            android:id="@+id/editTextDepartment"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Enter department" />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Reg No."/>
-        <EditText
-            android:id="@+id/editTextReg"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Enter reg No." />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Session"/>
-        <EditText
-            android:id="@+id/editTextSession"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Enter session" />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Phone No."/>
-        <EditText
-            android:id="@+id/editTextPhone"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Enter phone No." />
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:orientation="vertical">
 
-        <Button
-            android:id="@+id/submitButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="#09f519"
-            android:text="Submit" />
+            <TextView
+                android:paddingLeft="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="User Name"
+                android:textColor="@android:color/background_light" />
 
-    </LinearLayout>
+            <EditText
+                android:paddingLeft="15dp"
+                android:id="@+id/editTextUsername"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="Enter username"
+                android:background="@drawable/round1" />
 
-</FrameLayout>
+            <TextView
+                android:paddingLeft="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Email"
+                android:textColor="@android:color/background_light" />
+
+            <EditText
+                android:paddingLeft="15dp"
+                android:id="@+id/editTextEmail"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="Enter email"
+                android:background="@drawable/round1"
+                />
+
+            <TextView
+                android:paddingLeft="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Password"
+                android:textColor="@android:color/background_light" />
+
+            <EditText
+                android:paddingLeft="15dp"
+                android:id="@+id/editTextPassword"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="Enter password"
+                android:background="@drawable/round1"
+
+                android:textSize="16sp" />
+
+            <TextView
+                android:paddingLeft="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Department"
+                android:textColor="@android:color/background_light"
+                android:textSize="16sp" />
+
+            <EditText
+                android:paddingLeft="15dp"
+                android:id="@+id/editTextDepartment"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="Enter department"
+                android:background="@drawable/round1"
+
+                android:textSize="16sp" />
+
+            <TextView
+                android:paddingLeft="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Reg No."
+                android:textColor="@android:color/background_light"
+                android:textSize="16sp" />
+
+            <EditText
+                android:paddingLeft="15dp"
+                android:id="@+id/editTextReg"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="Enter reg No."
+                android:background="@drawable/round1"
+
+                android:textSize="16sp" />
+
+            <TextView
+                android:paddingLeft="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Session"
+                android:textColor="@android:color/background_light"
+                android:textSize="16sp" />
+
+            <EditText
+                android:paddingLeft="15dp"
+                android:id="@+id/editTextSession"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="Enter session"
+                android:background="@drawable/round1"
+
+                android:textSize="16sp" />
+
+            <TextView
+                android:paddingLeft="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Phone No."
+                android:textColor="@android:color/background_light"
+                android:textSize="16sp" />
+
+            <EditText
+                android:paddingLeft="15dp"
+                android:id="@+id/editTextPhone"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="Enter phone No."
+                android:background="@drawable/round1"
+
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/submitButton"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="100dp"
+                android:layout_marginLeft="80dp"
+                android:text="Submit"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
+                android:background="@drawable/login"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

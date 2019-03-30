@@ -11,7 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <action android:name="android.intent.action.SEARCH" />
@@ -25,14 +27,20 @@
                 android:value=".SearchableActivity" />
         </activity>
         <activity android:name=".BookCategory" />
-        <activity android:name=".CSE_Book_List" />
+        <activity
+            android:name=".CSE_Book_List"
+            android:windowSoftInputMode="stateAlwaysHidden"></activity>
         <activity android:name=".CIVIL_book_list" />
         <activity android:name=".EEE_book_list" />
         <activity android:name=".AddCseBook" />
         <activity android:name=".AddEeeBook" />
         <activity android:name=".AddCivilBook" />
         <activity android:name=".RegisterStudentList" />
-        <activity android:name=".Register_Book"></activity>
+        <activity android:name=".Register_Book" />
+        <activity android:name=".RegisterStuBookList" />
+        <activity android:name=".StudentBookList" />
+        <activity android:name=".Adapters.RSLAdapter" />
+        <activity android:name=".UnRegisterBook"></activity>
     </application>
 
 </manifest>

@@ -1,7 +1,9 @@
 package com.example.shariful.librarymanagement.Adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,8 +12,13 @@ import android.widget.TextView;
 
 import com.example.shariful.librarymanagement.Models.Register_stu;
 import com.example.shariful.librarymanagement.R;
+import com.example.shariful.librarymanagement.RegisterStuBookList;
+import com.example.shariful.librarymanagement.RegisterStudentList;
+import com.example.shariful.librarymanagement.StudentBookList;
 
 import java.util.List;
+
+import static android.support.v4.content.ContextCompat.startActivity;
 
 public class RSLAdapter extends RecyclerView.Adapter<RSLAdapter.ViewHolder> {
 

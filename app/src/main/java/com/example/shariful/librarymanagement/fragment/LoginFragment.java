@@ -113,6 +113,7 @@ public class LoginFragment extends android.support.v4.app.Fragment {
                     }
                     else if (response.body().getResponse().equals("ok")) {
                         LoginFragment.prefConfig.writeLoginStatus(true);
+                        LoginFragment.prefConfig.readLoginStatus();
                         Toast.makeText(getActivity(), "Login Successful", Toast.LENGTH_LONG).show();
                         startActivity(new Intent(getActivity(), BookCategory.class) );
                     }

@@ -3,51 +3,85 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@android:color/black"
+    android:background="@drawable/bg"
     android:layout_height="match_parent"
     android:orientation="vertical"
     >
 
-    <android.support.v7.widget.CardView
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        >
+
+    </LinearLayout>
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_margin="3dp"
-        android:padding="3dp"
-        android:visibility="visible"
-        app:cardCornerRadius="10dp">
+        android:layout_height="50dp">
 
-        <LinearLayout
+        <EditText
+            android:id="@+id/editTextSearch"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
+            android:layout_height="60dp"
+            android:padding="20dp"
+            android:background="@drawable/round1"
+            android:hint="Search">
 
-            <TextView
-                android:layout_width="130dp"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:text="Book Name" />
+            <requestFocus/>
+        </EditText>
 
-            <TextView
-                android:layout_width="100dp"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:text="Writername" />
+    </LinearLayout>
 
-            <TextView
-                android:layout_width="70dp"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:text="Edition" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="60dp"
+        >
 
-            <TextView
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="3dp"
+            android:padding="3dp"
+            app:cardCornerRadius="10dp">
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:gravity="center"
-                android:text="Amount" />
+                android:orientation="horizontal">
 
-        </LinearLayout>
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="Book Name" />
 
-    </android.support.v7.widget.CardView>
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="Writer Name" />
+
+                <TextView
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="Edition" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="Quantity" />
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+
+
 
 
         <android.support.design.widget.FloatingActionButton
@@ -67,7 +101,7 @@
         android:id="@+id/recycleview_cse"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="120dp"
         android:orientation="vertical">
 
     </android.support.v7.widget.RecyclerView>

@@ -27,10 +27,20 @@ public interface ApiInterface {
                                         @Query("phone") String phone);
     @GET("registerbook.php")
     Call<RegisterBook> registerBook(@Query("username") String username,
-                                        @Query("reg") String reg,
-                                        @Query("bookname") String bookname,
-                                        @Query("bookid") String bookid,
-                                        @Query("date") String date);
+                                    @Query("reg") String reg,
+                                    @Query("bookname") String bookname,
+                                    @Query("bookid") String bookid,
+                                    @Query("date") String date);
+    @GET("unregisterbook.php")
+    Call<RegisterBook> unregisterBook(@Query("username") String username,
+                                    @Query("reg") String reg,
+                                    @Query("bookid") String bookid);
+
+    @GET("student_book_list.php")
+    Call<List<RegisterBook>> studentBookList(@Query("username") String username,
+                                    @Query("reg") String reg);
+    @GET("register_stu_booklist.php")
+    Call<List<RegisterBook>> registerStuBookList();
 
     @GET("registered_stu_list.php")
     Call<List<Register_stu>> registeredstulist();

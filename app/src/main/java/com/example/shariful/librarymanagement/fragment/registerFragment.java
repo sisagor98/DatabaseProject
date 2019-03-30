@@ -71,6 +71,14 @@ public class registerFragment extends android.support.v4.app.Fragment {
         progressDialog.setMessage("Registering user...");
         progressDialog.show();
 
+        if(email.equals("") || username.equals("") || password.equals("") || department.equals("")
+                || reg.equals("") || session.equals("") || phone.equals(""))
+        {
+            progressDialog.dismiss();
+            Toast.makeText(getActivity(),"Empty field detected",Toast.LENGTH_SHORT).show();
+            return;
+        }
+
         Call<Register_stu> call =MainActivity.apiInterface.registerStudent(username, email, password, department, reg, session, phone);
 
         call.enqueue(new Callback<Register_stu>() {

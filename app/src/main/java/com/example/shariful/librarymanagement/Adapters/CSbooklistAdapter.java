@@ -52,7 +52,7 @@ public class CSbooklistAdapter extends RecyclerView.Adapter<CSbooklistAdapter.Vi
             @Override
             public boolean onLongClick(View v) {
 
-                //Toast.makeText(context,"Long clicked"+ position + viewHolder.b.getText(),Toast.LENGTH_SHORT).show();
+               // Toast.makeText(context,"Long clicked"+ position + viewHolder.b.getText(),Toast.LENGTH_SHORT).show();
                 deleteItem(position,viewHolder.b.getText(),viewHolder.w.getText());
                 Cs.remove(position);
                 notifyDataSetChanged();
@@ -64,6 +64,12 @@ public class CSbooklistAdapter extends RecyclerView.Adapter<CSbooklistAdapter.Vi
     @Override
     public int getItemCount() {
         return Cs.size();
+    }
+
+    public void filterList(List<CseBookList> filteredList){
+        Cs = filteredList;
+        notifyDataSetChanged();
+
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder{
