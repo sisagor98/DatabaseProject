@@ -71,6 +71,9 @@ public class BookCategory extends AppCompatActivity implements NavigationView.On
 
                 getSupportFragmentManager().beginTransaction().replace(R.id.activityContainer,new BookCategoryFragment()).commit();
                 break;
+            case R.id.myInfo:
+                getSupportFragmentManager().beginTransaction().replace(R.id.activityContainer,new MyInfoFragment()).commit();
+                break;
 
             case R.id.devInfo:
 

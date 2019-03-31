@@ -32,6 +32,17 @@ public class PrefConfig {
         {
             return sharedPreferences.getBoolean("logout_status",false);
         }
+
+        public void writeUsername(String s)
+        {
+            SharedPreferences.Editor editor = sharedPreferences.edit();
+            editor.putString("username",s);
+            editor.commit();
+        }
+        public String readUsername()
+        {
+            return  sharedPreferences.getString("username",null);
+        }
 //    public void writeAdminLoginStatus(boolean status) {
 //        SharedPreferences.Editor editor = sharedPreferences.edit();
 //        editor.putBoolean("login_status", status);

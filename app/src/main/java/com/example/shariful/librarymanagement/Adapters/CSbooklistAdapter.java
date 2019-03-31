@@ -13,6 +13,7 @@ import android.widget.Toast;
 import com.example.shariful.librarymanagement.MainActivity;
 import com.example.shariful.librarymanagement.Models.CseBookList;
 import com.example.shariful.librarymanagement.R;
+import com.example.shariful.librarymanagement.fragment.LoginFragment;
 
 import java.util.List;
 
@@ -48,17 +49,19 @@ public class CSbooklistAdapter extends RecyclerView.Adapter<CSbooklistAdapter.Vi
         viewHolder.a.setText(Cs.get(i).getAmount());
 
 
-        viewHolder.itemView.setOnLongClickListener(new View.OnLongClickListener() {
-            @Override
-            public boolean onLongClick(View v) {
+        if(!LoginFragment.prefConfig.readLoginStatus()) {
+            viewHolder.itemView.setOnLongClickListener(new View.OnLongClickListener() {
+                @Override
+                public boolean onLongClick(View v) {
 
-               // Toast.makeText(context,"Long clicked"+ position + viewHolder.b.getText(),Toast.LENGTH_SHORT).show();
-                deleteItem(position,viewHolder.b.getText(),viewHolder.w.getText());
-                Cs.remove(position);
-                notifyDataSetChanged();
-                return true;
-            }
-        });
+                    // Toast.makeText(context,"Long clicked"+ position + viewHolder.b.getText(),Toast.LENGTH_SHORT).show();
+                    deleteItem(position, viewHolder.b.getText(), viewHolder.w.getText());
+                    Cs.remove(position);
+                    notifyDataSetChanged();
+                    return true;
+                }
+            });
+        }
     }
 
     @Override
