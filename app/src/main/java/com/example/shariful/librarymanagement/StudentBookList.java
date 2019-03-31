@@ -7,6 +7,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.shariful.librarymanagement.Adapters.RegisterStuBookListAdapter;
 import com.example.shariful.librarymanagement.Adapters.StudentBookListAdapter;
@@ -78,6 +79,7 @@ public class StudentBookList extends AppCompatActivity {
             @Override
             public void onFailure(Call<List<RegisterBook>> call, Throwable t) {
 
+                Toast.makeText(StudentBookList.this,"Error Occured",Toast.LENGTH_SHORT).show();
             }
         });
 

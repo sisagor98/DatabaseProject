@@ -123,7 +123,7 @@ public class CSE_Book_List extends AppCompatActivity {
 
     public void filter(String Text)
     {
-        Toast.makeText(CSE_Book_List.this,"Ok",Toast.LENGTH_SHORT).show();
+        //Toast.makeText(CSE_Book_List.this,"Ok",Toast.LENGTH_SHORT).show();
         List<CseBookList> filteredList = new ArrayList<>();
         if(filteredList.isEmpty()) {
             for (CseBookList item : mcse) {
