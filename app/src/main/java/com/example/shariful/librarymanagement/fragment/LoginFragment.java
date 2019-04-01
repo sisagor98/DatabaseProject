@@ -27,7 +27,6 @@ import com.example.shariful.librarymanagement.retrofit.ApiInterface;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-
 public class LoginFragment extends android.support.v4.app.Fragment {
 
     TextView textView;
@@ -47,7 +46,6 @@ public class LoginFragment extends android.support.v4.app.Fragment {
     public LoginFragment() {
         // Required empty public constructor
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

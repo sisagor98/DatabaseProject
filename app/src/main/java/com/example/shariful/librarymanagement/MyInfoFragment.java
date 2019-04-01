@@ -46,7 +46,6 @@ public class MyInfoFragment extends Fragment {
 
     private TextView userName,Email,Dept,Reg,Phone;
 
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
